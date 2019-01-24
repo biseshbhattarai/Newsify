@@ -1,26 +1,22 @@
-# Transaction Manager
+# Newsify 
 
-T
-
-# Description
-
-This software primarily focuses with heavy and frequent transaction and helps to ease the overall process with relaxing user experience
+Newsify searches news from various website and allow user to share it among friends and feature such as summarization and sentiment analysis
 
 ## Installation
 
 First clone it from github ,
 
 ```bash
-git clone 'https://github.com/biseshbhattarai/Transaction-Microservice.git'
+git clone 'https://github.com/biseshbhattarai/Newsify.git'
 ```
-Install some of the required dependencies like Python3, Electron , Vue js , Django and django rest-framework
+Install some of the required dependencies like Python3, Django , Django-rest-framework, vue , rest-framework-jwt
 
 ```bash
 pip install django rest-framework
 ```
 and 
 ```bash
-yarn add vue electron
+yarn add vue 
 ```
 ## Usage
 Go to the main directory and run ,
@@ -28,16 +24,7 @@ Go to the main directory and run ,
 ```bash
 python manage.py runserver
 ```
-which should run our server, again then open up the client folder and run vue 
-
-```bash
-npm run dev
-```
-```bash
-electron .
-```
-
-which must run all our services 
+For a demo version it will be uploaded on [http://newssify.herokuapp.com](http://newssify.herokuapp.com) soon.
 
 ## Contact 
 
