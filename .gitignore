@@ -1,0 +1,9 @@
+/client/build/*
+/client/config/*
+/client/.editorconfig
+/client/.babelrc
+/client/.postcssrc.js
+/client/yarn.lock
+/server/db.sqlite3
+/server/server/__pycache__
+/server/serverapp/__pycache__
