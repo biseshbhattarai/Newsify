@@ -8,3 +8,6 @@
 /server/server/__pycache__
 /server/serverapp/__pycache__
 /server/script.py
+composer.json
+index.html
+index.php
