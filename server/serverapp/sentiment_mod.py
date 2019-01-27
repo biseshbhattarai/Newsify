@@ -1,6 +1,5 @@
 import nltk
 import random
-#from nltk.corpus import movie_reviews
 from nltk.classify.scikitlearn import SklearnClassifier
 import pickle
 from sklearn.naive_bayes import MultinomialNB, BernoulliNB
@@ -56,15 +55,6 @@ def find_features(document):
 
 
 
-# featuresets_f = open("pickled_algos/featuresets.pickle", "rb")
-# featuresets = pickle.load(featuresets_f)
-# featuresets_f.close()
-
-# random.shuffle(featuresets)
-# # print(len(featuresets))
-
-# testing_set = featuresets[10000:]
-# training_set = featuresets[:10000]
 
 
 
@@ -73,15 +63,6 @@ classifier = pickle.load(open_file)
 open_file.close()
 
 
-# open_file = open("pickled_algos/MNB_classifier5k.pickle", "rb")
-# MNB_classifier = pickle.load(open_file)
-# open_file.close()
-
-
-
-# open_file = open("pickled_algos/BernoulliNB_classifier5k.pickle", "rb")
-# BernoulliNB_classifier = pickle.load(open_file)
-# open_file.close()
 
 
 open_file = open("serverapp/pickled_algos/LogisticRegression_classifier5k.pickle", "rb")
@@ -93,10 +74,6 @@ open_file = open("serverapp/pickled_algos/LinearSVC_classifier5k.pickle", "rb")
 LinearSVC_classifier = pickle.load(open_file)
 open_file.close()
 
-
-# open_file = open("pickled_algos/SGDC_classifier5k.pickle", "rb")
-# SGDC_classifier = pickle.load(open_file)
-# open_file.close()
 
 
 
