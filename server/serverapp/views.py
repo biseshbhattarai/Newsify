@@ -31,14 +31,14 @@ class CommentList(generics.ListCreateAPIView):
     serializer_class = CommentSerializer
 
 class NewsList(generics.ListCreateAPIView):
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
 
     queryset = News.objects.all()
     serializer_class = NewsSerializer
 
 
 class CategoryView(generics.ListCreateAPIView):
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
 
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
@@ -77,7 +77,7 @@ def like(request, pk=None):
 
 
 class FetchView(APIView):
-    # permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated,)
 
     def get(self, request):
         res = requests.get('https://newsapi.org/v2/top-headlines?country=us&apiKey='+ API_KEY)
@@ -104,5 +104,4 @@ class CurrentUser(APIView):
 
     def get(self, request):
         user = request.user.username
-        # email = request.user.email
         return Response(user)
