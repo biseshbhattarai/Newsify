@@ -11,7 +11,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/register',
       name: 'Register',
       component: Register
     },
@@ -21,7 +21,7 @@ export default new Router({
       component: Login    
     },
     {
-      path: '/newsboard',
+      path: '/',
       name: 'NewsBoard',
       component: NewsBoard    
     }

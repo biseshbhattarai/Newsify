@@ -10,7 +10,7 @@
  
       <button class="btn btn-lg btn-primary btn-block" v-on:click.prevent="Login" type="submit">Login</button>
       <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-      <h5>New member ? <router-link to="/">Register</router-link></h5>
+      <h5>New member ? <router-link to="/register">Register</router-link></h5>
 
     </form>
   </body>
@@ -38,7 +38,7 @@ export default {
           .then(response => {
             //Store the jwt token by giving proper user credentials
             localStorage.setItem('access_token', response.data.access)
-            this.$router.push('/newsboard')
+            this.$router.push('/')
           })
           .catch(error => {
               if(error){

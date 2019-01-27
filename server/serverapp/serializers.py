@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from .models import Image, News
+from .models import Image, News, Category, Comment
 
 
 
@@ -24,7 +24,18 @@ class ImageSerializer(serializers.ModelSerializer):
         model = Image
         exclude = ('',)
 
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ('news_pk', 'topics')
+
+
 class NewsSerializer(serializers.ModelSerializer):
     class Meta:
         model = News
-        fields = ('id', 'title', 'trending', 'summary', 'full_news', 'like')
+        fields = ('id','author' ,'title' ,'sentiment','trending', 'summary', 'like', 'full_url', 'publishedDate')
+
+class CommentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Comment
+        fields = ('text', 'news')

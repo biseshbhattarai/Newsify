@@ -45,7 +45,7 @@ export default {
         .then(response => {
           //Storing the jwt token in localstorage
           localStorage.setItem('access_token', response.data.access)
-          this.$router.push('/newsboard')
+          this.$router.push('/')
         })
         .catch(err => {
           if(err){
